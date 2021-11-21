@@ -1,0 +1,17 @@
+Tarea2:
+Vamos a utilizar la clase Helmet (Casco) con la librería LabelImg, en el repositorio dejo el link del video tutorial que hicimos
+y en el readme queda el link al git de donde bajamos todo.
+Tarea de crear dataset:
+50 imagenes por cada uno de casos donde:
+Cada uno guardará sus imagenes con su inicial, la palabra img y el consecutivo, ejemplo ar_img_1.png (formato png)
+la iniciales quedan así:
+1. ar - Alaba Ramirez
+2. mg - Milton Guarin
+3. ag - Andres Guerra
+4. cm - Carlos Mejia
+las imagenes se guardaran en el drive que se compartio, donde images (las imagenes), lables (los archivos con los bounding box).
+
+Alba-casco bicicleta
+Milton-casco moto mujer
+Carlos- casco moto hombre
+Andres-casco niños y 3edad
