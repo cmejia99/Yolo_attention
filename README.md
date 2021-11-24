@@ -21,6 +21,10 @@ La detección de objetos en imágenes implica no solo identificar qué tipo de o
 
 YOLO (You Only Look Once) es el algoritmo de detección de objetos más popular actualmente, utiliza deep learning y CNN para detectar objetos, y se distingue de sus competidores (RCNN, Faster-RCNN) porque, como su nombre indica, requiere “ver ”La imagen solo una vez, lo que le permite ser la más rápida de todas (aunque sacrifica un poco la precisión). Esta velocidad le permite detectar fácilmente objetos en tiempo real en video (hasta 30 FPS).
 
+<p align="center">
+<img src="img/yolomodel.PNG" alt="" style="height: 400px; width:600px;"/>
+</P>
+
 En el presente trabajo se utilizará el algoritmo YOLO v3 con dos mecanismos de atención, SE (Squeeze-and-Excitation) y CBAM (Convolutional Block Attention Module), validando el desempeño en un dataset de imagen personalizado con una sola clase. Los resultados serán presentados y evaluados para realizar una comparación del modelo con el mejor desempeño en la tarea de detección de objetos.
 
 ## **Implementación** ##
