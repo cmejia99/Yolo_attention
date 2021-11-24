@@ -1,4 +1,4 @@
-# **YOLO con modulos de atención** #
+# **YOLO con modulos de atención SE - CBAM** #
 ## **Diseñado por:**
 * *Alba Maria Ramirez Marquinez*
     * **Código:** 2216260
@@ -10,9 +10,24 @@
     * **Código:** 2211058
 
 ## **Contenido** ##
-En este repositorio se podrá encontrar la documentación, fuentes y resultados llevados a cabo en la comparación de los modelos de la arquitectura YOLO v3 utilizando diferentes modelos de atención aplicados a nuestro DataSet.
 
-*   **Generación DataSet:** Para la generación de nuestro DataSet nos apoyamos en la herramienta **LabelImg** tomada del repositorio Git [LabelImg](https://github.com/tzutalin/labelImg). Se utilizó la aplicación Anaconda para realizar una instalación de entorno python, a este entorno se le instalo lo siguiente para la correcta utilización del programa LabelImg:
+En este repositorio encontrará la documentación, fuentes y resultados obtenidos con la comparación de los modelos de la arquitectura YOLO v3 utilizando mecánismos de atención SE (Squeeze-and-Excitation) y CBAM (Convolutional Block Attention Module).
+
+Los modelos se entrenarán para detectar cascos de motocicleta/bicicleta en diferentes imágenes obtenidas de internet, asi mismo, se realizará la prueba de detección del objeto también en un video.
+
+## **Resumen* ##
+
+La detección de objetos en imágenes implica no solo identificar qué tipo de objeto es, también ubicarlo dentro de la imagen (obtener las coordenadas de la "caja" que lo contiene). En otras palabras, detección = clasificación + ubicación.
+
+YOLO (You Only Look Once) es el algoritmo de detección de objetos más popular, utiliza deep learning y CNN para detectar objetos, y se distingue de sus competidores (RCNN, Faster-RCNN) porque, como su nombre indica, requiere “ver ”La imagen solo una vez, lo que le permite ser la más rápida de todas (aunque sacrifica un poco la precisión). Esta velocidad le permite detectar fácilmente objetos en tiempo real en video (hasta 30 FPS).
+
+En el presente trabajo se utilizará el algoritmo YOLO v3 con dos mecanismos de atención, SE (Squeeze-and-Excitation) y CBAM (Convolutional Block Attention Module), validando el desempeño en un dataset de imagen personalizado con una sola clase. Los resultados serán presentados y evaluados para realizar una comparación del modelo con el mejor desempeño en la tarea de detección de objetos.
+
+## **Implementación** ##
+
+*   **Generación DataSet:** Para la generación del datase de imágenes personalizado se definió la clase “helmet” (cascos de motocicleta/bicicleta).  Se descargaron 250 imágenes de internet de personas utilizando cascos de motocicleta o bicicleta en diferentes escenarios.  Una vez que recopilamos las imágenes, el siguiente paso fue etiquetarlas.
+
+Para la generación de nuestro DataSet nos apoyamos en la herramienta **LabelImg** tomada del repositorio Git [LabelImg](https://github.com/tzutalin/labelImg). Se utilizó la aplicación Anaconda para realizar una instalación de entorno python, a este entorno se le instalo lo siguiente para la correcta utilización del programa LabelImg:
 
     ```bash
     conda install pyqt=5
