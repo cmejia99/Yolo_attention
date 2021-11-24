@@ -27,7 +27,7 @@ En el presente trabajo se utilizará el algoritmo YOLO v3 con dos mecanismos de 
 
 **1. Generación DataSet:**  Para la generación del dataset de imágenes personalizado se definió la clase “helmet” correspondiente imagenes de personas usando cascos de motocicleta/bicicleta.  Se descargaron 250 imágenes de internet en diferentes escenarios.
 
-Luego de descargar las imagenes, se realiza el etiquetado de los objetos en cada imagen.  El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos que queremos detectar, para lo cual utilizamos la herramienta **LabelImg** tomada del repositorio Git [LabelImg](https://github.com/tzutalin/labelImg). 
+Luego de descargar las imagenes, se realiza el etiquetado de los objetos en cada imagen, para lo cual utilizamos la herramienta **LabelImg** tomada del repositorio Git [LabelImg](https://github.com/tzutalin/labelImg). 
 
 Para la instalación, se utilizó la aplicación Anaconda para implementar un entorno python, a este entorno se le instalo lo siguiente para la correcta utilización del programa LabelImg:
 
@@ -45,6 +45,10 @@ python labelImg.py
 <p align="center">
 <img src="img/example.png" alt="" style="height: 400px; width:600px;"/>
 </P>
+
+El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos que queremos detectar.  Para etiquetar los objetos en cada imagen, simplemente cargas todas las imágenes, dibujas el recuadro sobre el objeto de clase que quieres detectar, seleccionas la clase y se guarda la imagen cuando termines todos los recuadros de los objetos.  Cuando guarda las etiquetas después de cada imagen, labelImg crea un archivo de texto para cada imagen con el mismo nombre que la imagen.   Lo bueno de LabelImg es que nos permite guardar las anotaciones directamente en formato YOLO.  Cada archivo txt, tendrá los siguientes datos:
+
+object-id center_x center_y width height
 
 En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la transformación de los nombres de las imagenes **Change_name.ps1** y **Change_name_replace.ps1**, el proposito de estos script es el siguiente:
 
