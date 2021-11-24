@@ -1,4 +1,4 @@
-# **YOLO con modulos de atención SE - CBAM** #
+# **YOLO con módulos de atención SE - CBAM** #
 ## **Diseñado por:**
 * *Alba Maria Ramirez Marquinez*
     * **Código:** 2216260
