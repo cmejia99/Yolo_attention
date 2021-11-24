@@ -23,7 +23,10 @@ YOLO (You Only Look Once) es el algoritmo de detección de objetos más popular 
 
 <p align="center">
 <img src="img/yolomodel.PNG" alt="" style="height: 400px; width:600px;"/>
+<p align="center">Fig 1. El modelo de YOLO</P>
 </P>
+
+Este algoritmo trata la detección de objetos como un problema de regresión, tomando una imagen de entrada dada y aprendiendo simultáneamente las coordenadas del cuadro delimitador y las probabilidades de etiqueta de clase correspondientes, como se observa en la imagen anterior.
 
 En el presente trabajo se utilizará el algoritmo YOLO v3 con dos mecanismos de atención, SE (Squeeze-and-Excitation) y CBAM (Convolutional Block Attention Module), validando el desempeño en un dataset de imagen personalizado con una sola clase. Los resultados serán presentados y evaluados para realizar una comparación del modelo con el mejor desempeño en la tarea de detección de objetos.
 
@@ -33,6 +36,7 @@ En el presente trabajo se utilizará el algoritmo YOLO v3 con dos mecanismos de 
 
 <p align="center">
 <img src="img/helmet_ds.PNG" alt="" style="height: 400px; width:600px;"/>
+<p align="center">Fig 2. Dataset de cascos (Clase: helmet) </P>
 </P>
 
 Luego de descargar las imagenes, se realiza el etiquetado de los objetos en cada imagen, para lo cual utilizamos la herramienta **LabelImg** tomada del repositorio Git [LabelImg](https://github.com/tzutalin/labelImg). 
@@ -52,11 +56,14 @@ python labelImg.py
 
 <p align="center">
 <img src="img/labelimg.png" alt="" style="height: 400px; width:600px;"/>
+<p align="center">Fig 3. Interfaz gráfica LabelImg</P>
 </P>
 
 El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos que queremos detectar.  Para etiquetar los objetos en cada imagen, simplemente cargas todas las imágenes, dibujas el recuadro sobre el objeto de clase que quieres detectar, seleccionas la clase y se guarda la imagen cuando termines todos los recuadros de los objetos.  Cuando guarda las etiquetas después de cada imagen, labelImg crea un archivo de texto para cada imagen con el mismo nombre que la imagen.   Lo bueno de LabelImg es que nos permite guardar las anotaciones directamente en formato YOLO.  Cada archivo txt, tendrá los siguientes datos:
 
-object-id center_x center_y width height
+**object-id center_x center_y width height**
+
+Donde: object-id representa el identificador de la clase, center_x y center_y el punto central del cuadro delimitador y width height el ancho y alto del cuadro delimitador.
 
 En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la transformación de los nombres de las imagenes **Change_name.ps1** y **Change_name_replace.ps1**, el proposito de estos script es el siguiente:
 
@@ -68,6 +75,7 @@ En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la
 
 <p align="center">
 <img src="img/img_redim.png" alt="" style="height: 400px; width:600px;"/>
+<p align="center">Fig 4. Imagen original e imagen redimensionada</P>
 </P>
 
 Las imagenes originales se podrán en contrar en el repositorio [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing) en la carpeta **images_ori** y las imagenes redimensionadas se podrán encontrar en la carpeta **images**.
