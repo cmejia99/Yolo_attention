@@ -62,7 +62,17 @@ Las imagenes originales se podrán en contrar en el repositorio [Repositorio Goo
 
 
 
-**2. Entrenamiento:** Para llevar a cabo el entrenamiento de YOLOv3 con nuestra clase **Helmet** se creó el Colab **YOLO_tiny_se.ipynb**, el cual presenta los llamados necesarios a la librería de YOLOv3 tomado del repositorio GitHub [PyTorch-YOLOv3](https://github.com/promach/PyTorch-YOLOv3)
+
+
+
+**2. Implementación y entrenamiento de los modelos:** Para llevar la implementacion y el entrenamiento de YOLOv3 con nuestra clase **helmet** se creó un cuaderno en Google Colab **YOLO_tiny_se.ipynb**, el cual presenta los llamados necesarios a la librería de YOLOv3 tomado del repositorio GitHub [PyTorch-YOLOv3](https://github.com/promach/PyTorch-YOLOv3)
+
+
+
+
+## **Resultados** ##
+
+
 
 ## **Links alternos al repositorio:** ##
 * [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing)
