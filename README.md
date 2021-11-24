@@ -31,6 +31,10 @@ En el presente trabajo se utilizará el algoritmo YOLO v3 con dos mecanismos de 
 
 **1. Generación DataSet:**  Para la generación del dataset de imágenes personalizado se definió la clase “helmet” correspondiente imagenes de personas usando cascos de motocicleta/bicicleta.  Se descargaron 250 imágenes de internet en diferentes escenarios.
 
+<p align="center">
+<img src="img/helmet_ds.PNG" alt="" style="height: 400px; width:600px;"/>
+</P>
+
 Luego de descargar las imagenes, se realiza el etiquetado de los objetos en cada imagen, para lo cual utilizamos la herramienta **LabelImg** tomada del repositorio Git [LabelImg](https://github.com/tzutalin/labelImg). 
 
 Para la instalación, se utilizó la aplicación Anaconda para implementar un entorno python, a este entorno se le instalo lo siguiente para la correcta utilización del programa LabelImg:
