@@ -81,7 +81,7 @@ En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la
 *   **Redimensionamiento:** Dado que las imagenes que se buscaron en internet presentan diferentes dimensiones, se creo el colab **Utilidades/Images_transform.ipynb** para redimensionarlas todas a un tamaño predefinido de 416x416, a continuación se puede visualizar un ejemplo del redimensionado que se genero sobre las imagenes.
 
 <p align="center">
-<img src="img/img_redim.png" alt="" style="height: 400px; width:600px;"/>
+<img src="img/img_redim.png" alt="" style="height: 200px; width:400px;"/>
 <p align="center">Fig 5. Imagen original e imagen redimensionada</P>
 </P>
 
@@ -97,7 +97,7 @@ Nos basaremos en la arquitectura Tiny YOLOV3, que es una versión simplificada d
 Tiny YOLOV3 redujo la red de detección de funciones YOLOv3 darknet-53 a 7 capas de convolución tradicional y una capa de agrupación máxima de 6 capas, utilizando una predicción de dos escalas 13 * 13, 26 * 26 red para predecir el objetivo. La estructura de la red se muestra en la Figura 5.
 
 <p align="center">
-<img src="img/img_redim.png" alt="" style="height: 400px; width:600px;"/>
+<img src="img/Tiny-YOLOv3-tiny-network-structure.PNG" alt="" style="height: 300px; width:500px;"/>
 <p align="center">Fig 6. Arquitectura Tiny YOLOV3</P>
 </P>
 
