@@ -118,16 +118,16 @@ Tener en cuenta que se ajustaron los parámetros en xxxxxxxxxx para que el model
 
 * Detección en imagenes de objeto clase "helmet" con YOLOV3
     <p align="center">
-    <img src="img/img_yolo1.jpg" alt="" style="height: 200px; width:300px;"/>
-    <img src="img/img_yolo2.jpg" alt="" style="height: 200px; width:300px;"/>
-    <img src="img/img_yolo3.jpg" alt="" style="height: 200px; width:300px;"/>
-    <img src="img/img_yolo4.png" alt="" style="height: 200px; width:300px;"/> 
-    <img src="img/img_yolo5.jpg" alt="" style="height: 200px; width:300px;"/>
-    <img src="img/img_yolo6.png" alt="" style="height: 200px; width:300px;"/> 
-    <img src="img/img_yolo7.jpg" alt="" style="height: 200px; width:300px;"/>
-    <img src="img/img_yolo8.jpg" alt="" style="height: 200px; width:300px;"/>
-    <img src="img/img_yolo9.jpg" alt="" style="height: 200px; width:300px;"/>
-    <img src="img/img_yolo10.jpg" alt="" style="height: 200px; width:300px;"/>
+    <img src="img/img_yolo1.png" alt="" style="height: 200px; width:200px;"/>
+    <img src="img/img_yolo2.png" alt="" style="height: 200px; width:200px;"/>
+    <img src="img/img_yolo3.png" alt="" style="height: 200px; width:200px;"/>
+    <img src="img/img_yolo4.png" alt="" style="height: 200px; width:200px;"/> 
+    <img src="img/img_yolo5.png" alt="" style="height: 200px; width:200px;"/>
+    <img src="img/img_yolo6.png" alt="" style="height: 200px; width:200px;"/> 
+    <img src="img/img_yolo7.png" alt="" style="height: 200px; width:200px;"/>
+    <img src="img/img_yolo8.png" alt="" style="height: 200px; width:200px;"/>
+    <img src="img/img_yolo9.png" alt="" style="height: 200px; width:200px;"/>
+    <img src="img/img_yolo10.png" alt="" style="height: 200px; width:200px;"/>
     </P> 
 
 ## **Links alternos al repositorio:** ##
