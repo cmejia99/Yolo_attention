@@ -30,9 +30,9 @@ Este algoritmo trata la detección de objetos como un problema de regresión, to
 
 En el presente trabajo se utilizará el algoritmo YOLO v3 con dos mecanismos de atención, SE (Squeeze-and-Excitation) y CBAM (Convolutional Block Attention Module), validando el desempeño en un dataset de imagen personalizado con una sola clase. Los resultados serán presentados y evaluados para realizar una comparación del modelo con el mejor desempeño en la tarea de detección de objetos.
 
-## **Implementación** ##
+## **Generación Dataset** ##
 
-**1. Generación DataSet:**  Para la generación del dataset de imágenes personalizado se definió la clase “helmet” correspondiente imagenes de personas usando cascos de motocicleta/bicicleta.  Se descargaron 250 imágenes de internet en diferentes escenarios.
+Para la generación del dataset de imágenes personalizado se definió la clase “helmet” correspondiente imagenes de personas usando cascos de motocicleta/bicicleta.  Se descargaron 250 imágenes de internet en diferentes escenarios.
 
 <p align="center">
 <img src="img/helmet_ds.PNG" alt="" style="height: 400px; width:600px;"/>
@@ -87,8 +87,9 @@ En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la
 
 Las imagenes originales se podrán en contrar en el repositorio [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing) en la carpeta **images_ori** y las imagenes redimensionadas se podrán encontrar en la carpeta **images**.
 
+## **2. Implementación y entrenamiento de los modelos:** ## 
 
-**2. Implementación y entrenamiento de los modelos:** Para llevar la implementacion y el entrenamiento de YOLOv3 con nuestra clase **helmet** se creó un cuaderno en Google Colab **YOLO_tiny_se.ipynb**, el cual presenta los llamados necesarios a la librería de YOLOv3 tomado del repositorio GitHub [PyTorch-YOLOv3](https://github.com/promach/PyTorch-YOLOv3)
+Para la implementacion y el entrenamiento de YOLOv3 con nuestra clase **helmet** se creó un cuaderno en Google Colab **YOLO_tiny_se.ipynb**, el cual presenta los llamados necesarios a la librería de YOLOv3 tomado del repositorio GitHub [PyTorch-YOLOv3](https://github.com/promach/PyTorch-YOLOv3)
 
 Una vez creado el dataset, procedemos con la implementación de YOLO V3 y sus respectivas variantes con los módulos de atención SE y CBAM.
 
