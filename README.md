@@ -65,6 +65,13 @@ El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos
 
 Donde: object-id representa el identificador de la clase, center_x y center_y el punto central del cuadro delimitador y width height el ancho y alto del cuadro delimitador.
 
+El archivo de texto de anotación generado contendrá cada línea como la anterior para cada límite en la imagen y un archivo de texto para cada imagen.
+
+<p align="center">
+<img src="img/archivo_yolo.PNG" alt="" style="height: 200px; width:400px;"/>
+<p align="center">Fig 4. Archivo txt formato YOLO </P>
+</P>
+
 En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la transformación de los nombres de las imagenes **Change_name.ps1** y **Change_name_replace.ps1**, el proposito de estos script es el siguiente:
 
 *   **Change_name.ps1:** Cambiar el nombre de las imagenes descargas a las nomenclaturas definidas por el equipo. La estructura de los nombres de la imagenes será, **[Inicial_Ingeniero]\_img\_[id].[extension_imagen]**
@@ -75,19 +82,36 @@ En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la
 
 <p align="center">
 <img src="img/img_redim.png" alt="" style="height: 400px; width:600px;"/>
-<p align="center">Fig 4. Imagen original e imagen redimensionada</P>
+<p align="center">Fig 5. Imagen original e imagen redimensionada</P>
 </P>
 
 Las imagenes originales se podrán en contrar en el repositorio [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing) en la carpeta **images_ori** y las imagenes redimensionadas se podrán encontrar en la carpeta **images**.
 
 
-
-
-
-
 **2. Implementación y entrenamiento de los modelos:** Para llevar la implementacion y el entrenamiento de YOLOv3 con nuestra clase **helmet** se creó un cuaderno en Google Colab **YOLO_tiny_se.ipynb**, el cual presenta los llamados necesarios a la librería de YOLOv3 tomado del repositorio GitHub [PyTorch-YOLOv3](https://github.com/promach/PyTorch-YOLOv3)
 
+Una vez creado el dataset, procedemos con la implementación de YOLO V3 y sus respectivas variantes con los módulos de atención SE y CBAM.
 
+Nos basaremos en la arquitectura Tiny YOLOV3, que es una versión simplificada de YOLOV3. Es un algoritmo de detección en tiempo real desarrollado para dispositivos integrados con capacidades de procesamiento de datos deficientes. La estructura del modelo es simple y es actualmente es el algoritmo de detección de objetos más rápido, pero la precisión de detección es baja, especialmente en detección de objetos pequeños. 
+
+Tiny YOLOV3 redujo la red de detección de funciones YOLOv3 darknet-53 a 7 capas de convolución tradicional y una capa de agrupación máxima de 6 capas, utilizando una predicción de dos escalas 13 * 13, 26 * 26 red para predecir el objetivo. La estructura de la red se muestra en la Figura 5.
+
+<p align="center">
+<img src="img/img_redim.png" alt="" style="height: 400px; width:600px;"/>
+<p align="center">Fig 6. Arquitectura Tiny YOLOV3</P>
+</P>
+
+El dataset con 245 imágenes se dividió 80% para entrenamiento (196 imágenes) y 20% para pruebas (49 imágenes). Para realizar el entrenamiento se ejecuta el script train.py, con lo siguientes parámetros:
+
+--model_def: yolov3-tiny_custom.cfg
+
+--data: custom.data 
+
+--pretrained_weights: yolov3_ckpt_99.pth 
+
+--epochs: 100
+
+Tener en cuenta que se ajustaron los parámetros en xxxxxxxxxx para que el modelo solo trabajar con una clase.
 
 
 ## **Resultados** ##
