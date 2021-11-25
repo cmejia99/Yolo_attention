@@ -100,3 +100,4 @@ Las imagenes originales se podrán en contrar en el repositorio [Repositorio Goo
 ## **Referencias:** ##
 * [LabelImg](https://github.com/tzutalin/labelImg)
 * [PyTorch-YOLOv3](https://github.com/promach/PyTorch-YOLOv3)
+* [Sibozhu-GradCam](https://github.com/Sibozhu/grad-cam-formula-student)

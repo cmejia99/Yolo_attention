@@ -51,7 +51,7 @@ Thumbs.db
 .vscode/
 *.ipynb_checkpoints
 Modelos/Modelos/.ipynb_checkpoints/*
-
+Modelos/Backup/*
 *.rar
 
 DataSet/*
