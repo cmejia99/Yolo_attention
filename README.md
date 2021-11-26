@@ -87,7 +87,7 @@ En la toma de las imagenes se crearon dos archivos bash Windows de apoyo para la
 
 Las imagenes originales se podrán en contrar en el repositorio [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing) en la carpeta **images_ori** y las imagenes redimensionadas se podrán encontrar en la carpeta **images**.
 
-## **2. Implementación y entrenamiento de los modelos:** ## 
+## **Implementación y entrenamiento de los modelos:** ## 
 
 Para la implementacion y el entrenamiento de YOLOv3 con nuestra clase **helmet** se creó un cuaderno en Google Colab **YOLO_tiny_se.ipynb**, el cual presenta los llamados necesarios a la librería de YOLOv3 tomado del repositorio GitHub [PyTorch-YOLOv3](https://github.com/promach/PyTorch-YOLOv3)
 
@@ -102,33 +102,168 @@ Tiny YOLOV3 redujo la red de detección de funciones YOLOv3 darknet-53 a 7 capas
 <p align="center">Fig 6. Arquitectura Tiny YOLOV3</P>
 </P>
 
-El dataset con 245 imágenes se dividió 80% para entrenamiento (196 imágenes) y 20% para pruebas (49 imágenes). Para realizar el entrenamiento se ejecuta el script train.py, con lo siguientes parámetros:
+**1.  Preparamos el dataset.**  El dataset contiene 245 imágenes,  se dividió 80% para entrenamiento (196 imágenes) y 20% para pruebas (49 imágenes). 
 
---model_def: yolov3-tiny_custom.cfg
+**2. Clonamos el repositorio:**  
 
+```bash
+https://github.com/promach/PyTorch-YOLOv3.git
+```
+
+**3. Instalamos los requerimientos necesarios en Google Colab:**
+
+```bash
+!pip3 install -r requirements.txt
+```
+Para realizar el entrenamiento se ejecuta el script **train.py**, con los siguientes parámetros:
+
+```bash
+--model_def: yolov3-tiny_custom.cfg 
 --data: custom.data 
-
---pretrained_weights: yolov3_ckpt_99.pth 
-
+--pretrained_weights: yolov3-tiny.weights
 --epochs: 100
+```
 
-Tener en cuenta que se ajustaron los parámetros en xxxxxxxxxx para que el modelo solo trabajar con una clase.
+En el archivo **yolov3-tiny_custom.cfg** se deben configurar los siguiente parámetros:
+
+Xxxxxx
+Xxxxxxx
+Xxxxxxx
+Xxxxxxx
+
+Para implementar el **modulo de atención SE (Squeeze-and-Excitation)**, creamos un nuevo archivo de configuración de YOLOV3, insertando el mecanismo.
+
+El entrenamiento se ejecuta igualmente con el script **train.py**, con los siguientes parámetros:
+
+```bash
+--model_def: yolov3-tiny_custom_se.cfg 
+--data: custom.data 
+--pretrained_weights: yolov3-tiny.weights
+--epochs: 100
+```
+
+En el archivo **yolov3-tiny_custom_se.cfg** se deben configurar los siguiente parámetros:
+
+Xxxxxx
+Xxxxxxx
+Xxxxxxx
+Xxxxxxx
+
+Para implementar el **módulo de atención CBAM** (Convolutional Block Attention Module)*, creamos un nuevo archivo de configuración de YOLOV3 insertando el mecanismo.
+
+El entrenamiento se ejecuta igualmente con el script **train.py**, con los siguientes parámetros:
+
+```bash
+--model_def: yolov3-tiny_custom_cbam.cfg 
+--data: custom.data 
+--pretrained_weights: yolov3-tiny.weights
+--epochs: 100
+```
+
+En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente parámetros:
+
+Xxxxxx
+Xxxxxxx
+Xxxxxxx
+Xxxxxxx
 
 ## **Resultados** ##
 
-* Detección en imagenes de objeto clase "helmet" con YOLOV3
-    <p align="center">
-    <img src="img/img_yolo1.png" alt="" style="height: 200px; width:200px;"/>
-    <img src="img/img_yolo2.png" alt="" style="height: 200px; width:200px;"/>
-    <img src="img/img_yolo3.png" alt="" style="height: 200px; width:200px;"/>
-    <img src="img/img_yolo4.png" alt="" style="height: 200px; width:200px;"/> 
-    <img src="img/img_yolo5.png" alt="" style="height: 200px; width:200px;"/>
-    <img src="img/img_yolo6.png" alt="" style="height: 200px; width:200px;"/> 
-    <img src="img/img_yolo7.png" alt="" style="height: 200px; width:200px;"/>
-    <img src="img/img_yolo8.png" alt="" style="height: 200px; width:200px;"/>
-    <img src="img/img_yolo9.png" alt="" style="height: 200px; width:200px;"/>
-    <img src="img/img_yolo10.png" alt="" style="height: 200px; width:200px;"/>
-    </P> 
+**Detector de objetos en imagenes - clase "helmet"**
+   
+<table>
+<tr>
+<td>Resultados YOLOV3</td>
+<td>Resultados YOLOV3 + SE</td>
+<td>Resultados YOLOV3 + CBAM</td>
+</tr>
+<tr>
+<td><img src="img/img_yolo1.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se1.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo2.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se2.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo3.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se3.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo4.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se4.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo5.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se5.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo6.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se6.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo7.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se7.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo8.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se8.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo9.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se9.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo10.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se10.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+</table>
+
+**Imagenes con mapa de calor - clase "helmet"**
+
+<table>
+<tr>
+<td><img src="img/img_yolo1.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se1.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo2.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se2.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo3.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se3.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo4.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se4.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo5.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se5.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo6.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se6.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo7.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se7.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo8.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se8.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo9.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se9.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+<tr>
+<td><img src="img/img_yolo10.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_se10.png" alt="" style="height: 300px; width:300px;"/></td>
+</tr>
+
+</table>
 
 ## **Links alternos al repositorio:** ##
 * [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing)
