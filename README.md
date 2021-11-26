@@ -263,6 +263,9 @@ Implementamos YOLOv3 Tiny con dos mecanismos de atención, Squeeze-Excitation (S
 </tr>
 </table>
 
+## **Conclusiones** ##
+...XXXX (LLER maP)
+
 ## **Links alternos al repositorio:** ##
 * [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing)
 
