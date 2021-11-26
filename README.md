@@ -59,7 +59,7 @@ python labelImg.py
 <p align="center">Fig 3. Interfaz gráfica LabelImg</P>
 </P>
 
-El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos que queremos detectar.  Para etiquetar los objetos en cada imagen, simplemente se carga todas las imágenes, se procede a dibujar el recuadro sobre el objeto de clase que quieres detectar, seleccionas la clase y se guarda la imagen cuando termines todos los recuadros de los objetos.  Cuando guarda las etiquetas después de cada imagen, labelImg crea un archivo de texto para cada imagen con el mismo nombre que la imagen.   Lo bueno de LabelImg es que nos permite guardar las anotaciones directamente en formato YOLO.  Cada archivo txt, tendrá los siguientes datos:
+El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos que queremos detectar.  Para etiquetar los objetos en cada imagen, simplemente cargas todas las imágenes, dibujas el recuadro sobre el objeto de clase que quieres detectar, seleccionas la clase y se guarda la imagen cuando termines todos los recuadros de los objetos.  Cuando guarda las etiquetas después de cada imagen, labelImg crea un archivo de texto para cada imagen con el mismo nombre que la imagen.   Lo bueno de LabelImg es que nos permite guardar las anotaciones directamente en formato YOLO.  Cada archivo txt, tendrá los siguientes datos:
 
 **object-id center_x center_y width height**
 
@@ -223,46 +223,35 @@ Xxxxxxx
 
 <table>
 <tr>
-<td><img src="img/img_yolo1.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se1.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap1.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo2.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se2.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap2.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo3.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se3.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap3.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo4.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se4.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap4.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo5.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se5.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap5.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo6.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se6.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap6.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo7.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se7.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap7.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo8.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se8.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap8.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo9.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se9.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap9.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
 <tr>
-<td><img src="img/img_yolo10.png" alt="" style="height: 300px; width:300px;"/></td>
-<td><img src="img/img_se10.png" alt="" style="height: 300px; width:300px;"/></td>
+<td><img src="img/img_yolomap10.png" alt="" style="height: 300px; width:500px;"/></td>
 </tr>
-
 </table>
 
 ## **Links alternos al repositorio:** ##
