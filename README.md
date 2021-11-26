@@ -59,7 +59,7 @@ python labelImg.py
 <p align="center">Fig 3. Interfaz gráfica LabelImg</P>
 </P>
 
-El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos que queremos detectar.  Para etiquetar los objetos en cada imagen, simplemente cargas todas las imágenes, dibujas el recuadro sobre el objeto de clase que quieres detectar, seleccionas la clase y se guarda la imagen cuando termines todos los recuadros de los objetos.  Cuando guarda las etiquetas después de cada imagen, labelImg crea un archivo de texto para cada imagen con el mismo nombre que la imagen.   Lo bueno de LabelImg es que nos permite guardar las anotaciones directamente en formato YOLO.  Cada archivo txt, tendrá los siguientes datos:
+El etiquetado consiste en dibujar cuadros delimitadores alrededor de los objetos que queremos detectar.  Para etiquetar los objetos en cada imagen, simplemente se carga todas las imágenes, se procede a dibujar el recuadro sobre el objeto de clase que quieres detectar, seleccionas la clase y se guarda la imagen cuando termines todos los recuadros de los objetos.  Cuando guarda las etiquetas después de cada imagen, labelImg crea un archivo de texto para cada imagen con el mismo nombre que la imagen.   Lo bueno de LabelImg es que nos permite guardar las anotaciones directamente en formato YOLO.  Cada archivo txt, tendrá los siguientes datos:
 
 **object-id center_x center_y width height**
 
