@@ -126,10 +126,12 @@ Para realizar el entrenamiento se ejecuta el script **train.py**, con los siguie
 
 En el archivo **yolov3-tiny_custom.cfg** se deben configurar los siguiente parámetros:
 
-Xxxxxx
-Xxxxxxx
-Xxxxxxx
-Xxxxxxx
+```bash
+--Capa #15 [convolutional] se cambia filters=18
+--Capa #16 [yolo] se cambia classes=1
+--Capa #22 [convolutional] se cambia filters=18
+--Capa #23 [yolo] se cambia classes=1
+```
 
 Para implementar el **modulo de atención SE (Squeeze-and-Excitation)**, creamos un nuevo archivo de configuración de YOLOV3, insertando el mecanismo.
 
@@ -142,14 +144,14 @@ El entrenamiento se ejecuta igualmente con el script **train.py**, con los sigui
 --epochs: 100
 ```
 
-En el archivo **yolov3-tiny_custom_se.cfg** se deben configurar los siguiente parámetros:
+En el archivo **yolov3-tiny_custom_se.cfg** entre la capa convolucional #12 y #13 se inserta el modulo SE (Squeeze-and-Excitation):
 
-Xxxxxx
-Xxxxxxx
-Xxxxxxx
-Xxxxxxx
+```bash
+--[se]
+--reduction=16
+```
 
-Para implementar el **módulo de atención CBAM** (Convolutional Block Attention Module)*, creamos un nuevo archivo de configuración de YOLOV3 insertando el mecanismo.
+Para implementar el **módulo de atención CBAM (Convolutional Block Attention Module)**, creamos un nuevo archivo de configuración de YOLOV3 insertando el mecanismo.
 
 El entrenamiento se ejecuta igualmente con el script **train.py**, con los siguientes parámetros:
 
@@ -162,10 +164,10 @@ El entrenamiento se ejecuta igualmente con el script **train.py**, con los sigui
 
 En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente parámetros:
 
-Xxxxxx
-Xxxxxxx
-Xxxxxxx
-Xxxxxxx
+```bash
+--[se]
+--reduction=16
+```
 
 ## **Resultados** ##
 
