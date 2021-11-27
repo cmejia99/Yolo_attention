@@ -172,12 +172,14 @@ En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente 
 ## **Resultados** ##
 
 Implementamos YOLOv3 Tiny con dos mecanismos de atención, Squeeze-Excitation (SE) y Módulo de Atención de Bloques Convolucionales (CBAM). Para el análisis presentamos los resultados de desempeño de los modelos propuestos  aplicados a la base de datos customizada:
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
+<p align="center">
+Modelo  | Epoca | mAP
+------------- | ------------- | ------------- 
+YOLOV3 Tiny| 100 | Content Cell
+YOLOV3 Tiny+ SE|100   | dgnfhmghmcg
+YOLOV3 Tiny+ CBAM| 100  | dgnfhmghmcg
+------------- | ------------- | -------------
+</P>
 
 <p align="center">
 <img src="img/tabla_comparativa.PNG" alt="" style="height: 200px; width:400px;"/>
