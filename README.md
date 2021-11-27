@@ -172,19 +172,15 @@ En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente 
 ## **Resultados** ##
 
 Implementamos YOLOv3 Tiny con dos mecanismos de atención, Squeeze-Excitation (SE) y Módulo de Atención de Bloques Convolucionales (CBAM). Para el análisis presentamos los resultados de desempeño de los modelos propuestos  aplicados a la base de datos customizada:
-<p align="center">
+
 Modelo  | Epoca | mAP
 ------------- | ------------- | ------------- 
-YOLOV3 Tiny| 100 | Content Cell
-YOLOV3 Tiny+ SE|100   | dgnfhmghmcg
-YOLOV3 Tiny+ CBAM| 100  | dgnfhmghmcg
+YOLOV3 Tiny| 100 | 0.62992 
+YOLOV3 Tiny+ SE|100   | 0.68058
+YOLOV3 Tiny+ CBAM| 100  | 0.59384 ?
 ------------- | ------------- | -------------
-</P>
 
-<p align="center">
-<img src="img/tabla_comparativa.PNG" alt="" style="height: 200px; width:400px;"/>
-<p align="center">Tabla 1. Tabla comparativa modelos</P>
-</P>
+
 
 **Detector de objetos en imagenes - clase "helmet"**
    
@@ -307,7 +303,10 @@ YOLOV3 Tiny+ CBAM| 100  | dgnfhmghmcg
 </table>
  
 ## **Conclusiones** ##
-...XXXX (LLER maP)
+A través de la implementación realizada y descrita anteriormente, se pudo validar que para la aplicación de la detección y clasificación de casco de motociclistas en un ambiente de tráfico,donde la confusa información de fondo causa un gran impacto en la detección del objetivo. Mediante la arquitectura de red YOLOv3-tiny se observó que  hubo dificultades en la identificación de objetos superpuestos, y no fue  fácil para el modelo distinguirlas. 
+
+En este sentido, se pudo validar que los mecanismos o modelos de atención definitivamente mejoran el poder de enfoque,cuando integramos los módulos de atención SE y CBAM a la red YOLO se observó mejoras en la precisión de detección a  los objetivos pequeños.
+
 
 ## **Links alternos al repositorio:** ##
 * [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing)
