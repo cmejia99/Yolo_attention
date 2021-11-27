@@ -228,40 +228,21 @@ Implementamos YOLOv3 Tiny con dos mecanismos de atención, Squeeze-Excitation (S
 </tr>
 </table>
 
-**Imagenes con mapa de calor - clase "helmet"**
+**Imagenes con Heatmap - clase "helmet"**
 
-<table>
-<tr>
-<td><img src="img/img_yolomap1.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap2.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap3.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap4.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap5.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap6.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap7.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap8.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap9.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-<tr>
-<td><img src="img/img_yolomap10.png" alt="" style="height: 300px; width:500px;"/></td>
-</tr>
-</table>
+| <p align="center">**Modelo Original**</p>   |      <p align="center">**Modelo SE**</p>      |  <p align="center">**Modelo CBAM**</p> |
+|----------|:-------------:|------:|
+| <img src="img/img_yolomap1.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se1.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam1.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap2.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se2.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam2.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap3.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se3.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam3.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap4.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se4.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam4.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap5.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se5.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam5.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap6.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se6.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam6.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap7.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se7.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam7.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap8.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se8.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam8.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap9.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se9.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam9.png" alt="" style="height: 0; width:0;"/> |
+| <img src="img/img_yolomap10.png" alt="" style="height: 300px; width:500px;"/> |  <img src="img/img_yolomap_se10.png" alt="" style="height: 300px; width:500px;"/> | <img src="img/img_yolomap_cbam10.png" alt="" style="height: 0; width:0;"/> | 
+ 
 
 ## **Conclusiones** ##
 ...XXXX (LLER maP)
