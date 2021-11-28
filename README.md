@@ -150,7 +150,7 @@ elif module_def['type'] == 'se':
      'se_module',
       SELayer(output_filters[-1], reduction=int(module_def['reduction'])))
 ```
-En este mismo archivo se agrega la siguient clase:
+En este mismo archivo se agrega la siguiente clase:
 ```python
 class SELayer(nn.Module):
     def __init__(self, channel, reduction=16):
@@ -194,7 +194,7 @@ elif module_def['type'] == 'cbam':
             modules.add_module("channelAttention", ca)
             modules.add_module("SpatialAttention", sa)
 ```
-En este mismo archivo se agrega la siguient clase:
+En este mismo archivo se agrega la siguiente clase:
 ```python
 class SpatialAttention(nn.Module):
     def __init__(self, kernel_size=7):
