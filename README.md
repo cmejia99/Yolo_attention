@@ -165,8 +165,8 @@ El entrenamiento se ejecuta igualmente con el script **train.py**, con los sigui
 En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente parámetros:
 
 ```bash
---[se]
---reduction=16
+--[cbam]
+--kernelsize=7
 ```
 
 ## **Resultados** ##
