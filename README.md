@@ -355,6 +355,10 @@ A través de la implementación realizada y descrita anteriormente, se pudo vali
 
 En este sentido, se pudo validar que los mecanismos o modelos de atención definitivamente mejoran el poder de enfoque,cuando integramos los módulos de atención SE y CBAM a la red YOLO se observó mejoras en la precisión de detección a  los objetivos pequeños.
 
+Se consideró que los modelos pueden tener mejoras con muchas más épocas de entrenamiento y con un dataset más grande para así poder evidenciar mejores resultados en el modelo CBAM como se indica en los artículos estudiados en clases.Con nuestros datos actuales el mejor comportamiento tuvo el modelo de atención SE dando que fue más preciso en detectar los objetos que corresponden a la clase.
+
+Partiendo de  los resultados de este artículo y el artículo presentado anteriormente RESNET50 CON MÓDULOS DE ATENCIÓN SE – CBAM podemos concluir que con pocas épocas e imágenes de entrenamiento el mejor modelo es el SE, y teóricamente  el modelo CBAM daría mejores resultados con más épocas de entrenamiento y un dataset más robusto según la información del estado del arte.
+
 
 ## **Links alternos al repositorio:** ##
 * [Repositorio Google Drive](https://drive.google.com/drive/folders/1XLkhu0QKoeiVU00qahQfJsPmESpb9Y3l?usp=sharing)
