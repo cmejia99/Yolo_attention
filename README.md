@@ -121,7 +121,7 @@ Para realizar el entrenamiento se ejecuta el script **train.py**, con los siguie
 --model_def: yolov3-tiny_custom.cfg 
 --data: custom.data 
 --pretrained_weights: yolov3-tiny.weights
---epochs: 100
+--epochs: 200
 ```
 
 En el archivo **yolov3-tiny_custom.cfg** se deben configurar los siguiente parámetros:
@@ -141,7 +141,7 @@ El entrenamiento se ejecuta igualmente con el script **train.py**, con los sigui
 --model_def: yolov3-tiny_custom_se.cfg 
 --data: custom.data 
 --pretrained_weights: yolov3-tiny.weights
---epochs: 100
+--epochs: 200
 ```
 
 En el archivo **yolov3-tiny_custom_se.cfg** entre la capa convolucional #12 y #13 se inserta el modulo SE (Squeeze-and-Excitation):
@@ -159,7 +159,7 @@ El entrenamiento se ejecuta igualmente con el script **train.py**, con los sigui
 --model_def: yolov3-tiny_custom_cbam.cfg 
 --data: custom.data 
 --pretrained_weights: yolov3-tiny.weights
---epochs: 100
+--epochs: 200
 ```
 
 En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente parámetros:
@@ -173,11 +173,11 @@ En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente 
 
 Implementamos YOLOv3 Tiny con dos mecanismos de atención, Squeeze-Excitation (SE) y Módulo de Atención de Bloques Convolucionales (CBAM). Para el análisis presentamos los resultados de desempeño de los modelos propuestos  aplicados a la base de datos customizada:
 
-Modelo  | Epoca | mAP
+Modelo  | Mejor epoca | mAP
 ------------- | ------------- | ------------- 
-YOLOV3 Tiny| 100 | 0.62992 
-YOLOV3 Tiny+ SE|100   | 0.68058
-YOLOV3 Tiny+ CBAM| 100  | 0.72
+YOLOV3 Tiny| 102 |  0.6805
+YOLOV3 Tiny+ SE|113   | 0.6846
+YOLOV3 Tiny+ CBAM| 179  |  0.7078
 ------------- | ------------- | -------------
 
 
