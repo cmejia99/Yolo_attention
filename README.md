@@ -143,6 +143,30 @@ El entrenamiento se ejecuta igualmente con el script **train.py**, con los sigui
 --pretrained_weights: yolov3-tiny.weights
 --epochs: 200
 ```
+En el archivo **model.py** se agrega el siguiente bloque constructor:
+```python
+elif module_def['type'] == 'se':
+     modules.add_module(
+     'se_module',
+      SELayer(output_filters[-1], reduction=int(module_def['reduction'])))
+```
+En este mismo archivo se agrega la siguient clase:
+```python
+class SELayer(nn.Module):
+    def __init__(self, channel, reduction=16):
+        super(SELayer, self).__init__()
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)
+        self.fc = nn.Sequential(
+            nn.Linear(channel, channel // reduction, bias=False),
+            nn.ReLU(inplace=True),
+            nn.Linear(channel // reduction, channel, bias=False),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        b, c, _, _ = x.size()
+        y = self.avg_pool(x).view(b, c)
+```    
 
 En el archivo **yolov3-tiny_custom_se.cfg** entre la capa convolucional #12 y #13 se inserta el modulo SE (Squeeze-and-Excitation):
 
@@ -161,6 +185,30 @@ El entrenamiento se ejecuta igualmente con el script **train.py**, con los sigui
 --pretrained_weights: yolov3-tiny.weights
 --epochs: 200
 ```
+
+En el archivo **model.py** se agrega el siguiente bloque constructor:
+```python
+elif module_def['type'] == 'cbam':
+            ca = ChannelAttention(in_planes=output_filters[-1])
+            sa = SpatialAttention(kernel_size=int(module_def['kernelsize']))
+            modules.add_module("channelAttention", ca)
+            modules.add_module("SpatialAttention", sa)
+```
+En este mismo archivo se agrega la siguient clase:
+```python
+class SpatialAttention(nn.Module):
+    def __init__(self, kernel_size=7):
+        super(SpatialAttention, self).__init__()
+        assert kernel_size in (3,7), "kernel size must be 3 or 7"
+        padding = 3 if kernel_size == 7 else 1
+        self.conv = nn.Conv2d(2,1,kernel_size, padding=padding, bias=False)
+        self.sigmoid = nn.Sigmoid()
+
+    def forward(self, x):
+        avgout = torch.mean(x, dim=1, keepdim=True)
+        maxout, _ = torch.max(x, dim=1, keepdim=True)
+        x = torch.c
+```    
 
 En el archivo **yolov3-tiny_custom_cbam.cfg** se deben configurar los siguiente parámetros:
 
